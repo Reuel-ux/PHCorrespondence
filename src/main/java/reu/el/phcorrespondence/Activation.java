@@ -11,20 +11,6 @@ public class Activation {
         return input;
     };
 
-    public static ActivationFunction softMax = input -> {
-        double[] output = new double[input.length];
-        double sum = 0;
-        /* exponentiating and summing */
-        for (int i = 0; i < input.length; i++) {
-            output[i] = Math.exp(input[i]);
-            sum += output[i];
-        }
-        /* normalizing */
-        for(int i = 0; i< output.length; i++)
-            output[i] /= sum;
-        return output;
-    };
-
 
     /* Sigmoid activation function */
     public static double sigmoid(double input) {
